@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Website Title</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">
+            <img src="CXphotos/CX-LOGO.png" alt="Logo" width="125" height="70">
+        </div>
+        <ul id="menuList">
+            <li><a href="nav.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="#">Products</a></li>
+            <li><a href="Contact.html">Contact</a></li>
+            <li><a href="About.html">About Us</a></li>
+        </ul>
+        <div class="search-icon">
+            <input type="text" placeholder="Search...">
+            <button class="search-btn"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+        <div class="menu-icon" onclick="toggleMenu()">
+            <i class="fa-solid fa-bars"></i>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-text">
+                <h1>Curiosity meets Creativity</h1>
+                <p>CuriosityXploring is a dynamic platform and community that not only trains and empowers individuals with globally sought-after IT skills, transforming them into skilled tech professionals, but also provides cutting-edge tech solutions to businesses, individuals, and corporate bodies.</p>
+                <a href="services.html" class="button">Get Started</a>
+                <a href="Contact.html" class="button-demo">Get Demo</a>
+            </div>
+            <div class="hero-image">
+                <img src="CXphotos/heropix.jpeg" alt="Hero Image">
+            </div>
+        </div>
+    </section>
+
+
+    <section class="services">
+        <div class="container-services">
+            <div class="service">
+                <img src="CXphotos/web1.jpeg" alt="Service 1" width="400" height="500">
+                <h2 class="service-title">Web Development</h2>
+                <p class="service-description">We build dynamic and responsive websites and web-apps tailored to meet your business needs. We can turn those beautiful ideas of yours into reality with tech</p>
+                <button class="services-btn">Reach Out</button>
+            </div>
+            <div class="service">
+                <img src="CXphotos/web2.jpeg" alt="Service 2" width="400" height="500">
+                <h2 class="service-title">Digital Skills Training</h2>
+                <p class="service-description">Enhance your digital skills with our comprehensive training programs, designed for all levels.</p>
+                <button class="services-btn2">Register Now</button>
+            </div>
+            <div class="service">
+                <img src="CXphotos/Cyber.jpeg" alt="Service 3" width="400" height="500">
+                <h2 class="service-title">IT Consultancy</h2>
+                <p class="service-description">Expert IT consultancy services to help you navigate the complexities of the digital world.</p>
+                <button class="services-btn">Reach Out</button>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <section class="cta-section">
+        <div class="cta-container">
+            <div class="cta-content">
+                <h2>Would you like more information or <br>have any further questions?</h2>
+                <a href="contact.html" class="cta-button">Get in Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-col">
+                <h4>Company</h4>
+                <ul>
+                    <li><a href="About.html">About Us</a></li>
+                    <li><a href="services.html">Our Services</a></li>
+                    <li><a href="Contact.html">Contact Us</a></li>
+                    <li><a href="Contact.html">Policy</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Follow Us</h4>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <footer class="footer">
+        <div class="container">
+            <p class="copyright">Copyright: (c) 2024 CuriosityXploring</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        function toggleMenu() {
+            const menuList = document.getElementById("menuList");
+            menuList.classList.toggle("active");
+        }
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+
+            document.querySelector(this.getAttribute('href')).scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+    }); 
+
+
+    document.querySelector('.contact-button').addEventListener('click', function (e) {
+        e.preventDefault();
+        const name = document.querySelector('input[type="text"]');
+        const email = document.querySelector('input[type="email"]');
+        const message = document.querySelector('textarea');
+
+        if (name.value.trim() === "" || email.value.trim() === "" || message.value.trim() === "") {
+            alert("Please fill in all fields.");
+        } else if (!validateEmail(email.value)) {
+            alert("Please enter a valid email address.");
+        } else {
+            alert("Form submitted successfully!");
+            // You can add code here to actually submit the form data to your server
+        }
+    });
+
+    function validateEmail(email) {
+        const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        return re.test(String(email).toLowerCase());
+    }
+
+    let slideIndex = 0;
+    const slides = document.querySelectorAll('.slide');
+    const prevButton = document.querySelector('.prev');
+    const nextButton = document.querySelector('.next');
+
+    function showSlide(index) {
+        slides.forEach((slide, i) => {
+            slide.style.display = i === index ? 'block' : 'none';
+        });
+    }
+
+    function nextSlide() {
+        slideIndex = (slideIndex + 1) % slides.length;
+        showSlide(slideIndex);
+    }
+
+    function prevSlide() {
+        slideIndex = (slideIndex - 1 + slides.length) % slides.length;
+        showSlide(slideIndex);
+    }
+
+    nextButton.addEventListener('click', nextSlide);
+    prevButton.addEventListener('click', prevSlide);
+
+    // Show the first slide by default
+    showSlide(slideIndex);
+
+    </script>
+
+</body>
+</html>
