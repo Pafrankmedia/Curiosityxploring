@@ -439,7 +439,7 @@ footer .social-links a:hover {
     position:relative;
 }
 
-/* Container for content alignment */
+
 .footer .container {
     display: flex;
     justify-content: center;
@@ -449,7 +449,6 @@ footer .social-links a:hover {
     padding: 0 15px;
 }
 
-/* Copyright Text Styling */
 .footer .copyright {
     font-size: 12px;
     font-family: "Oxanium", sans-serif;
