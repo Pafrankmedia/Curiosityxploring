@@ -603,7 +603,7 @@ footer .social-links a:hover {
 
 
 #registration-page {
-    background-color: #4b4848;
+    background-color: #ffffff;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -614,7 +614,7 @@ footer .social-links a:hover {
 
 .form-container {
     background-color: #fff;
-    padding: 35px;
+    padding: 40px;
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     max-width: 400px;
@@ -644,9 +644,10 @@ input, select {
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 5px;
-    font-size: 1rem;
+    font-size: 0.8rem;
     margin-bottom: 5px;
 }
+
 /*
 #toggle-password {
     position: absolute;
@@ -660,21 +661,30 @@ input, select {
     color: #00a8a8;
 }
 */
+.check-box{
+    display: flex;
+}
+.input-group2 {
+    align-items: left;
+    width: 10%;
+    padding-left: 2px;
+}
 .terms {
     display: flex;
-    align-items: center;
+    align-items: left;
+   
 }
 
 .terms input {
-    margin-right: 5px;
+    margin-right: 20px;
 }
 
 .terms a {
-    color: #00a8a8;
+    color: #001fa8;
 }
 
 .submit-button {
-    background-color: #00a8a8;
+    background-color: #001fa8;
     color: #fff;
     padding: 10px;
     border: none;
@@ -686,7 +696,7 @@ input, select {
 }
 
 .submit-button:hover {
-    background-color: #008a8a;
+    background-color: #0c33df;
 }
 
 p {
@@ -705,8 +715,8 @@ p a {
 }
 
 .footer3 {
-    background-color: #4b4848;
-    color: #fff;
+    background-color: #f0eded;
+    color: #2a2c2c;
     padding: 3px 0;
     position:relative;
 }
@@ -718,6 +728,7 @@ p a {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 15px;
+    margin-top: 30px;
 }
 
 .footer3 .copyright {
