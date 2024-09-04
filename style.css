@@ -557,6 +557,51 @@ footer .social-links a:hover {
     }
 }
 
+
+.page-header {
+    background-image: url('CXphotos/software-developer.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 60px 20px;
+    text-align: right;
+    color: rgb(255, 255, 255);
+    position: relative;
+}
+
+.page-header-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+.page-header h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 0;text-align: left;
+}
+
+.breadcrumb {
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+.breadcrumb a {
+    color: white;
+    text-decoration: none;
+    opacity: 0.8;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+    opacity: 1;
+}
+
+.breadcrumb span {
+    opacity: 0.8;
+}
+
+
 #registration-page {
     background-color: #4b4848;
     display: flex;
@@ -569,12 +614,12 @@ footer .social-links a:hover {
 
 .form-container {
     background-color: #fff;
-    padding: 50px;
+    padding: 35px;
     border-radius: 10px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     max-width: 400px;
     width: 100%;
-    margin-bottom: 50px;  
+    margin: 60 60px;  
     height: 90vh;
 }
 
