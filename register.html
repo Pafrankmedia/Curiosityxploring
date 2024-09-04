@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="registration-page"> 
+    <div class="form-container">
+        <form id="registration-form">
+            <h2>Create an account and Start Learning!</h2>
+            <div class="input-group">
+                <label for="first-name">First Name</label>
+                <input type="text" id="first-name" name="first-name" placeholder="First name" required>
+            </div>
+            <div class="input-group">
+                <label for="last-name">Last Name</label>
+                <input type="text" id="last-name" name="last-name" placeholder="Last name" required>
+            </div>
+            <div class="input-group">
+                <label for="phone-number">Phone Number</label>
+                <input type="text" id="phone-number" name="phone-number" placeholder="Phone Number" required>
+            </div>
+            <div class="input-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="Enter email address" required>
+            </div>
+            <div class="input-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Password" required>
+            </div>
+            <div class="input-group">
+                <label for="course">Select Course + Cost</label>
+                <select id="course" name="course" required>
+                    <option value="" disabled selected>Select Course</option>
+                    <option value="UI/UX Design">UI/UX Design (₦30000)</option>
+                    <option value="Web Development">Web Development (₦50000)</option>
+                    <option value="App development ">App development (₦100000)</option>
+                    <option value="Cybersecurity">Cybersecurity (₦100000)</option>
+                    <option value="Data Analysis">Data Analysis (₦50000)</option>
+                    <option value="Product Management">Product Management (₦30000)</option>
+                    <option value="Project Management">Project Management (₦3000)</option>
+                    <option value="Graphic Designs">Graphic Designs (₦25000)</option>
+                </select>
+            </div>
+            <div class="input-group terms">
+                <input type="checkbox" id="terms" name="terms" required>
+                <label for="terms">By registering I agree to the <a href="#">terms and conditions</a></label>
+            </div>
+            <button type="submit" class="submit-button">Register & Pay</button>
+            <p>Already have an account? <a href="#">Log in</a></p>
+        </form>
+    </div>
+</div>
+
+<footer class="footer3">
+    <div class="container3">
+        <p class="copyright">Copyright (c) 2024 CuriosityXploring</p>
+    </div>
+</footer>
+
+    <script>
+        document.getElementById('toggle-password').addEventListener('click', function () {
+    const passwordField = document.getElementById('password');
+    const passwordFieldType = passwordField.getAttribute('type') === 'password' ? 'text' : 'password';
+    passwordField.setAttribute('type', passwordFieldType);
+    this.textContent = passwordFieldType === 'password' ? 'Show' : 'Hide';
+});
+
+document.getElementById('registration-form').addEventListener('submit', function (event) {
+    event.preventDefault();
+    // Implement form submission logic here
+    alert('Form submitted successfully!');
+});
+    </script>
+</body>
+</html>
