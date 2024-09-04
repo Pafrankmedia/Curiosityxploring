@@ -273,7 +273,7 @@ nav .menu-icon {
     font-family: 'Oxanium', sans-serif;
 }
 
-.services-btn2{
+.register-button{
     background-color: #f44336;
     padding: 12px 25px;
     border-radius: 5px;
@@ -290,7 +290,7 @@ nav .menu-icon {
     background-color: #5f5d5d;
 }
 
-.services-btn2:hover {
+.register-button:hover {
     background-color: #5f5d5d;
 }
 
@@ -602,7 +602,7 @@ input, select {
     font-size: 1rem;
     margin-bottom: 5px;
 }
-
+/*
 #toggle-password {
     position: absolute;
     right: 10px;
@@ -614,7 +614,7 @@ input, select {
     cursor: pointer;
     color: #00a8a8;
 }
-
+*/
 .terms {
     display: flex;
     align-items: center;
@@ -660,7 +660,7 @@ p a {
 }
 
 .footer3 {
-    background-color: #010147;
+    background-color: #4b4848;
     color: #fff;
     padding: 3px 0;
     position:relative;
