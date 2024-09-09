@@ -460,21 +460,23 @@ footer .social-links a:hover {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: #f9f9f9;
 }
 
 .container {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     max-width: 1200px;
     width: 100%;
-    gap: 10px;
-    justify-content: center;
+    gap: 30px;
+    justify-content: space-between; 
     flex-wrap: wrap;
 }
 
 .about-text {
     flex: 1;
     max-width: 600px;
+    padding: 20px;
 }
 
 .about-text h1 {
@@ -482,15 +484,17 @@ footer .social-links a:hover {
     margin-bottom: 20px;
     font-weight: 700;
     color: #00a8a8;
+    text-align: center;
 }
 
 .about-text h2 {
     color: #00a8a8;
+    margin-bottom: 10px;
 }
 
 .about-text p {
     margin-bottom: 20px;
-    font-size: 1.1rem;
+    font-size: 1.4rem;
     color: #555555;
 }
 
@@ -498,16 +502,22 @@ footer .social-links a:hover {
     flex: 1;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 20px;
     align-items: flex-start;
+    position: relative;
+    margin-top: 40px;
 }
 
 .about-img {
-    width: 50%;
-    max-width: 220px;
+    width: 100%;
+    max-width: 300px; 
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.second-img {
+    margin-top: 5px;
 }
 
 .about-img:hover {
@@ -515,32 +525,22 @@ footer .social-links a:hover {
     box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2);
 }
 
-
 @media (max-width: 768px) {
     .container {
         flex-direction: column; 
-        gap: 20px;
         align-items: center;
-    }
-
-    .about-text {
-        max-width: 100%;
-        text-align: center; 
     }
 
     .about-images {
-        align-items: center; 
-        gap: 20px; 
         align-items: center;
+    }
+
+    .about-img {
+        max-width: 80%;
     }
 
     .about-text h1 {
         font-size: 2rem;
-    }
-
-    .about-img {
-        max-width: 50%; 
-        margin-bottom: 20px; 
     }
 }
 
@@ -554,7 +554,7 @@ footer .social-links a:hover {
     }
 
     .about-img {
-        max-width: 50%; 
+        max-width: 70%;
     }
 }
 
