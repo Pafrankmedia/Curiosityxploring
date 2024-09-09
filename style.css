@@ -180,7 +180,7 @@ nav .menu-icon {
 .hero-image img {
     max-width: 100%;
     height: auto;
-    border-radius: 10px;
+    border-radius: 15px;
 }
 
 @media (max-width: 768px) {
@@ -243,6 +243,7 @@ nav .menu-icon {
     border-radius: 10px;
     margin-bottom: 15px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    align-content: center;
 }
 
 .services .service img:hover {
@@ -769,7 +770,7 @@ p a {
 .contact-text p {
     font-size: 18px;
     margin-bottom: 10px;
-    color: #666;
+    color: #000000;
     text-align: center;
    
 }
@@ -786,7 +787,7 @@ p a {
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     width: 40%;
-    margin-right: 10%;
+  
 }
 
 .contact-form form {
@@ -829,7 +830,7 @@ button:hover {
     background-color: #5633c9;
 }
 
-/* Responsive design */
+
 @media (max-width: 768px) {
     .contact-container {
         flex-direction: column;
