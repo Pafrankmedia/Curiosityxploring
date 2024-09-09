@@ -77,18 +77,47 @@
 </footer>
 
     <script>
-        document.getElementById('toggle-password').addEventListener('click', function () {
-    const passwordField = document.getElementById('password');
-    const passwordFieldType = passwordField.getAttribute('type') === 'password' ? 'text' : 'password';
-    passwordField.setAttribute('type', passwordFieldType);
-    this.textContent = passwordFieldType === 'password' ? 'Show' : 'Hide';
+    document.getElementById('registration-form').addEventListener('submit', function(event) {
+    event.preventDefault(); 
+
+    const firstName = document.getElementById('first-name').value;
+    const lastName = document.getElementById('last-name').value;
+    const phoneNumber = document.getElementById('phone-number').value;
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
+    const course = document.getElementById('course').value;
+    const termsAccepted = document.getElementById('terms').checked;
+
+
+    if (!validateEmail(email)) {
+        alert('Please enter a valid email address.');
+        return; 
+    }
+
+    if (phoneNumber.length < 10 || phoneNumber.length > 15) {
+        alert('Please enter a valid phone number.');
+        return; 
+    }
+
+    if (!termsAccepted) {
+        alert('You must agree to the terms and conditions.');
+        return; 
+    }
+
+    if (password.length <= 8 .specialcharacter){
+        alert('Please enter a valid password.'); return;
+    }
+
+    alert('Registration successful! You are now registered for the course: ' + course);
+
+    document.getElementById('registration-form').reset();
+
 });
 
-document.getElementById('registration-form').addEventListener('submit', function (event) {
-    event.preventDefault();
-    // Implement form submission logic here
-    alert('Form submitted successfully!');
-});
+function validateEmail(email) {
+    const re = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    return re.test(String(email).toLowerCase());
+}
     </script>
 </body>
 </html>

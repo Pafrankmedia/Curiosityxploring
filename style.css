@@ -367,7 +367,7 @@ nav .menu-icon {
 }
 
 footer {
-    padding: 30px 20px;
+    padding: 15px 20px;
     background-color: #02024d;
     color: #fff;
     text-align: center;
@@ -381,7 +381,7 @@ footer .footer-container {
 
 footer .footer-col {
     flex: 1 1 calc(33.333% - 20px);
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 footer .footer-col h4 {
@@ -415,11 +415,12 @@ footer .social-links {
     display: flex;
     justify-content: center;
     gap: 20px;
+    padding: 10px;
 }
 
 footer .social-links a {
-    color: white;
-    font-size: 15px;
+    color: rgb(38, 93, 243);
+    font-size: 20px;
     transition: color 0.3s;
 }
 
@@ -729,7 +730,7 @@ p a {
     max-width: 1200px;
     margin: 0 auto;
     padding: 0 15px;
-    margin-top: 30px;
+    margin-top: 10px;
 }
 
 .footer3 .copyright {
